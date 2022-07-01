@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Jul 2022 pada 09.09
+-- Waktu pembuatan: 01 Jul 2022 pada 09.32
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.0.20
 
@@ -198,6 +198,26 @@ CREATE TABLE `penjualan` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `penjualan`
+--
+
+INSERT INTO `penjualan` (`id_penjualan`, `id_member`, `total_item`, `total_harga`, `diskon`, `total_keuntungan`, `bayar`, `diterima`, `id_user`, `created_at`, `updated_at`) VALUES
+(1, NULL, 0, 0, 0, 0, 0, 0, 1, '2022-06-30 23:10:57', '2022-06-30 23:10:57'),
+(2, NULL, 3, 165000, 5000, 35000, 160000, 160000, 1, '2022-07-01 07:15:27', '2022-07-01 07:17:35'),
+(3, NULL, 1, 160000, 0, 20000, 160000, 160000, 1, '2022-07-01 07:17:40', '2022-07-01 07:18:02'),
+(4, NULL, 2, 115000, 10000, 20000, 105000, 105000, 1, '2022-07-01 07:18:04', '2022-07-01 07:18:41'),
+(5, NULL, 1, 15000, 0, 10000, 15000, 15000, 1, '2022-07-01 07:18:43', '2022-07-01 07:19:03'),
+(6, NULL, 1, 140000, 0, 20000, 140000, 140000, 1, '2022-07-01 07:19:06', '2022-07-01 07:19:27'),
+(7, NULL, 1, 15000, 0, 10000, 15000, 15000, 1, '2022-07-01 07:19:29', '2022-07-01 07:19:42'),
+(8, NULL, 1, 20000, 0, 10000, 20000, 20000, 1, '2022-07-01 07:19:44', '2022-07-01 07:20:01'),
+(9, NULL, 1, 125000, 5000, 20000, 120000, 120000, 1, '2022-07-01 07:20:03', '2022-07-01 07:20:27'),
+(10, NULL, 1, 20000, 0, 8000, 20000, 20000, 1, '2022-07-01 07:20:29', '2022-07-01 07:20:48'),
+(11, NULL, 0, 0, 0, 0, 0, 0, 1, '2022-07-01 07:20:51', '2022-07-01 07:20:51'),
+(12, NULL, 2, 450000, 10000, 40000, 440000, 440000, 1, '2022-07-01 07:22:09', '2022-07-01 07:22:50'),
+(13, NULL, 0, 0, 0, 0, 0, 0, 1, '2022-07-01 07:24:11', '2022-07-01 07:24:11'),
+(14, NULL, 5, 25000, 0, 25000, 25000, 25000, 1, '2022-07-01 07:26:41', '2022-07-01 07:27:08');
+
 -- --------------------------------------------------------
 
 --
@@ -217,6 +237,26 @@ CREATE TABLE `penjualan_detail` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `penjualan_detail`
+--
+
+INSERT INTO `penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `harga_beli`, `harga_jual`, `jumlah`, `diskon`, `keuntungan`, `subtotal`, `created_at`, `updated_at`) VALUES
+(1, 2, 78, 105000, 125000, 1, 0, 20000, 125000, '2022-07-01 07:16:55', '2022-07-01 07:16:55'),
+(2, 2, 219, 10000, 20000, 2, 0, 20000, 40000, '2022-07-01 07:17:07', '2022-07-01 07:17:12'),
+(3, 3, 18, 140000, 160000, 1, 0, 20000, 160000, '2022-07-01 07:17:47', '2022-07-01 07:17:47'),
+(4, 4, 208, 80000, 100000, 1, 0, 20000, 100000, '2022-07-01 07:18:11', '2022-07-01 07:18:11'),
+(5, 4, 217, 5000, 15000, 1, 0, 10000, 15000, '2022-07-01 07:18:18', '2022-07-01 07:18:18'),
+(6, 5, 217, 5000, 15000, 1, 0, 10000, 15000, '2022-07-01 07:18:56', '2022-07-01 07:18:56'),
+(7, 6, 190, 120000, 140000, 1, 0, 20000, 140000, '2022-07-01 07:19:16', '2022-07-01 07:19:16'),
+(8, 7, 217, 5000, 15000, 1, 0, 10000, 15000, '2022-07-01 07:19:35', '2022-07-01 07:19:35'),
+(9, 8, 219, 10000, 20000, 1, 0, 10000, 20000, '2022-07-01 07:19:53', '2022-07-01 07:19:53'),
+(10, 9, 39, 100000, 125000, 1, 0, 25000, 125000, '2022-07-01 07:20:12', '2022-07-01 07:20:12'),
+(11, 10, 234, 12000, 20000, 1, 0, 8000, 20000, '2022-07-01 07:20:40', '2022-07-01 07:20:40'),
+(12, 12, 187, 290000, 320000, 1, 0, 30000, 320000, '2022-07-01 07:22:19', '2022-07-01 07:22:19'),
+(13, 12, 105, 110000, 130000, 1, 0, 20000, 130000, '2022-07-01 07:22:32', '2022-07-01 07:22:32'),
+(14, 14, 235, 0, 5000, 5, 0, 25000, 25000, '2022-07-01 07:26:49', '2022-07-01 07:26:56');
 
 -- --------------------------------------------------------
 
@@ -261,7 +301,7 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, `merk`, `harga_beli`, `diskon`, `harga_jual`, `stok`, `created_at`, `updated_at`) VALUES
-(1, 1, 'P000001', 'Pop Sens Grappe', NULL, 60000, 0, 80000, 3, '2022-06-30 19:43:33', '2022-06-30 19:43:33'),
+(1, 1, 'P000001', 'Pop Sens Grappe', NULL, 60000, 0, 80000, 3, '2022-06-30 19:43:33', '2022-07-01 07:30:08'),
 (2, 1, 'P000002', 'Pop Sens Lemon', NULL, 60000, 0, 80000, 6, '2022-06-30 19:44:01', '2022-06-30 19:44:01'),
 (3, 1, 'P000003', 'Mr .Coffee Strawberry', NULL, 130000, 0, 145000, 1, '2022-06-30 19:50:55', '2022-06-30 19:50:55'),
 (4, 1, 'P000004', 'Mr .Coffee Chesse', NULL, 130000, 0, 145000, 1, '2022-06-30 19:51:19', '2022-06-30 19:51:19'),
@@ -278,7 +318,7 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (15, 1, 'P000015', 'Slank v1 banana', NULL, 140000, 0, 160000, 4, '2022-06-30 20:04:43', '2022-06-30 20:04:43'),
 (16, 1, 'P000016', 'Slank v2 Blackcurrant', NULL, 140000, 0, 160000, 2, '2022-06-30 20:05:13', '2022-06-30 20:05:13'),
 (17, 1, 'P000017', 'Slank v3 fullmoon', NULL, 140000, 0, 160000, 3, '2022-06-30 20:05:56', '2022-06-30 20:06:36'),
-(18, 1, 'P000018', 'Zat besi', NULL, 140000, 0, 160000, 3, '2022-06-30 20:07:14', '2022-06-30 20:07:14'),
+(18, 1, 'P000018', 'Zat besi', NULL, 140000, 0, 160000, 2, '2022-06-30 20:07:14', '2022-07-01 07:18:02'),
 (19, 1, 'P000019', 'Orbit banana', NULL, 120000, 0, 140000, 1, '2022-06-30 20:18:50', '2022-06-30 20:18:50'),
 (20, 1, 'P000020', 'Babe', NULL, 140000, 0, 160000, 0, '2022-06-30 20:19:50', '2022-06-30 20:19:50'),
 (21, 1, 'P000021', 'Krusty v1', NULL, 125000, 0, 145000, 0, '2022-06-30 20:22:03', '2022-06-30 20:22:03'),
@@ -299,7 +339,7 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (36, 1, 'P000036', 'muffin v1 strawberry', NULL, 110000, 0, 130000, 2, '2022-06-30 20:49:05', '2022-06-30 20:49:05'),
 (37, 1, 'P000037', 'muffin v2 blackcurrant', NULL, 110000, 0, 130000, 0, '2022-06-30 20:49:45', '2022-06-30 20:49:45'),
 (38, 1, 'P000038', 'Kaguya', NULL, 110000, 0, 130000, 2, '2022-06-30 20:50:28', '2022-06-30 20:50:28'),
-(39, 1, 'P000039', 'Pastry time', NULL, 100000, 0, 125000, 1, '2022-06-30 20:51:37', '2022-06-30 20:51:37'),
+(39, 1, 'P000039', 'Pastry time', NULL, 100000, 0, 125000, 0, '2022-06-30 20:51:37', '2022-07-01 07:20:27'),
 (40, 1, 'P000040', 'DNKW strawberry', NULL, 100000, 0, 120000, 3, '2022-06-30 20:52:45', '2022-06-30 20:52:45'),
 (41, 1, 'P000041', 'Bequ', NULL, 100000, 0, 120000, 2, '2022-06-30 20:54:47', '2022-06-30 20:54:47'),
 (42, 1, 'P000042', 'waffle banana', NULL, 105000, 0, 125000, 3, '2022-06-30 20:55:58', '2022-06-30 20:55:58'),
@@ -338,7 +378,7 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (75, 1, 'P000075', 'Polar grape', NULL, 95000, 0, 115000, 2, '2022-06-30 21:31:54', '2022-06-30 21:31:54'),
 (76, 1, 'P000076', 'Grape lyechee', NULL, 105000, 0, 125000, 1, '2022-06-30 21:32:23', '2022-06-30 21:32:23'),
 (77, 1, 'P000077', 'Nyx lyeche peach', NULL, 105000, 0, 125000, 1, '2022-06-30 21:32:58', '2022-06-30 21:32:58'),
-(78, 1, 'P000078', 'Nyx grape apple', NULL, 105000, 0, 125000, 1, '2022-06-30 21:33:16', '2022-06-30 21:33:16'),
+(78, 1, 'P000078', 'Nyx grape apple', NULL, 105000, 0, 125000, 0, '2022-06-30 21:33:16', '2022-07-01 07:17:35'),
 (79, 1, 'P000079', 'Nyx grape peach', NULL, 105000, 0, 125000, 1, '2022-06-30 21:33:34', '2022-06-30 21:33:34'),
 (80, 1, 'P000080', 'Nyx Manggo raspberry', NULL, 105000, 0, 125000, 2, '2022-06-30 21:35:08', '2022-06-30 21:35:08'),
 (81, 1, 'P000081', 'Levica', NULL, 55000, 0, 75000, 14, '2022-06-30 21:37:39', '2022-06-30 21:37:39'),
@@ -365,7 +405,7 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (102, 1, 'P000102', 'Candiman series', NULL, 100000, 0, 120000, 3, '2022-06-30 21:46:33', '2022-06-30 21:46:33'),
 (103, 1, 'P000103', 'Luxxy cream', NULL, 110000, 0, 130000, 3, '2022-06-30 21:47:11', '2022-06-30 21:47:11'),
 (104, 1, 'P000104', 'The hype', NULL, 110000, 0, 130000, 3, '2022-06-30 21:47:38', '2022-06-30 21:47:38'),
-(105, 1, 'P000105', 'Oat drips v1 original oat', NULL, 110000, 0, 130000, 1, '2022-06-30 21:48:03', '2022-06-30 21:48:03'),
+(105, 1, 'P000105', 'Oat drips v1 original oat', NULL, 110000, 0, 130000, 0, '2022-06-30 21:48:03', '2022-07-01 07:22:50'),
 (106, 1, 'P000106', 'Oat drips v2 kacang ijo', NULL, 110000, 0, 130000, 0, '2022-06-30 21:48:17', '2022-06-30 21:48:17'),
 (107, 1, 'P000107', 'Oat drips v3 banana', NULL, 110000, 0, 130000, 2, '2022-06-30 21:48:31', '2022-06-30 21:48:31'),
 (108, 1, 'P000108', 'Oat drips v5 coklat legacy', NULL, 110000, 0, 130000, 2, '2022-06-30 21:48:48', '2022-06-30 21:48:48'),
@@ -432,10 +472,10 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (184, 4, 'P000184', 'Ursa baby', NULL, 170000, 0, 190000, 5, '2022-06-30 22:41:18', '2022-06-30 22:41:44'),
 (185, 4, 'P000185', 'Ursa nano', NULL, 160000, 0, 185000, 0, '2022-06-30 22:42:00', '2022-06-30 22:42:00'),
 (186, 4, 'P000186', 'Ursa nano pink', NULL, 190000, 0, 220000, 0, '2022-06-30 22:42:20', '2022-06-30 22:42:20'),
-(187, 4, 'P000187', 'Gk2', NULL, 290000, 0, 320000, 4, '2022-06-30 22:52:03', '2022-06-30 22:52:03'),
+(187, 4, 'P000187', 'Caliburn Gk2', NULL, 290000, 0, 320000, 3, '2022-06-30 22:52:03', '2022-07-01 07:22:50'),
 (188, 4, 'P000188', 'Vinci royale', NULL, 225000, 0, 260000, 1, '2022-06-30 22:52:28', '2022-06-30 22:52:28'),
 (189, 4, 'P000189', 'Vinci pod kit', NULL, 185000, 0, 230000, 2, '2022-06-30 22:52:44', '2022-06-30 22:52:44'),
-(190, 4, 'P000190', 'Vinci q', NULL, 120000, 0, 140000, 3, '2022-06-30 22:53:01', '2022-06-30 22:53:01'),
+(190, 4, 'P000190', 'Vinci q', NULL, 120000, 0, 140000, 2, '2022-06-30 22:53:01', '2022-07-01 07:19:27'),
 (191, 4, 'P000191', 'Drag nano2', NULL, 245000, 0, 270000, 2, '2022-06-30 22:53:18', '2022-06-30 22:53:18'),
 (192, 4, 'P000192', 'Caliburn a2', NULL, 185000, 0, 220000, 0, '2022-06-30 22:53:39', '2022-06-30 22:53:39'),
 (193, 4, 'P000193', 'Easy', NULL, 115000, 0, 130000, 1, '2022-06-30 22:53:53', '2022-06-30 22:53:53'),
@@ -453,7 +493,7 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (205, 5, 'P000205', 'Wasp nano rta authen', NULL, 180000, 0, 220000, 1, '2022-06-30 22:58:15', '2022-06-30 22:58:15'),
 (206, 5, 'P000206', 'Zeus rta clone', NULL, 95000, 0, 140000, 2, '2022-06-30 22:58:30', '2022-06-30 22:58:30'),
 (207, 5, 'P000207', 'Gear rta clone', NULL, 110000, 0, 150000, 2, '2022-06-30 22:59:50', '2022-06-30 22:59:50'),
-(208, 5, 'P000208', 'Nitrous clone', NULL, 80000, 0, 100000, 2, '2022-06-30 23:00:04', '2022-06-30 23:00:04'),
+(208, 5, 'P000208', 'Nitrous clone', NULL, 80000, 0, 100000, 1, '2022-06-30 23:00:04', '2022-07-01 07:18:41'),
 (209, 5, 'P000209', 'Reload s clone', NULL, 80000, 0, 100000, 5, '2022-06-30 23:00:18', '2022-06-30 23:00:18'),
 (210, 6, 'P000210', 'easy cartridge', NULL, 23000, 0, 35000, 1, '2022-06-30 23:00:56', '2022-06-30 23:00:56'),
 (211, 6, 'P000211', 'Cartridge vinci', NULL, 31000, 0, 40000, 9, '2022-06-30 23:01:27', '2022-06-30 23:01:27'),
@@ -462,9 +502,9 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (214, 6, 'P000214', 'Coil caliburn g', NULL, 31000, 0, 40000, 8, '2022-06-30 23:03:11', '2022-06-30 23:03:11'),
 (215, 6, 'P000215', 'Cartridge dragnano2', NULL, 32000, 0, 40000, 7, '2022-06-30 23:03:30', '2022-06-30 23:03:30'),
 (216, 6, 'P000216', 'Cartridge caliburn A2', NULL, 31000, 0, 40000, 13, '2022-06-30 23:03:53', '2022-06-30 23:03:53'),
-(217, 6, 'P000217', 'Baby alien', NULL, 5000, 0, 15000, 33, '2022-06-30 23:04:13', '2022-06-30 23:04:13'),
+(217, 6, 'P000217', 'Baby alien', NULL, 5000, 0, 15000, 30, '2022-06-30 23:04:13', '2022-07-01 07:19:42'),
 (218, 6, 'P000218', 'Full tm', NULL, 20000, 0, 35000, 22, '2022-06-30 23:04:25', '2022-06-30 23:04:25'),
-(219, 6, 'P000219', 'Fushed', NULL, 10000, 0, 20000, 32, '2022-06-30 23:04:39', '2022-06-30 23:04:39'),
+(219, 6, 'P000219', 'Fushed', NULL, 10000, 0, 20000, 29, '2022-06-30 23:04:39', '2022-07-01 07:20:01'),
 (220, 6, 'P000220', 'Coil vinci 0.6', NULL, 24000, 0, 35000, 4, '2022-06-30 23:05:05', '2022-06-30 23:05:05'),
 (221, 6, 'P000221', 'Coil vinci 0.3', NULL, 24000, 0, 35000, 7, '2022-06-30 23:05:18', '2022-06-30 23:05:18'),
 (222, 6, 'P000222', 'Coil vinci 0.45', NULL, 24000, 0, 35000, 4, '2022-06-30 23:05:31', '2022-06-30 23:05:31'),
@@ -479,7 +519,8 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `kode_produk`, `nama_produk`, 
 (231, 7, 'P000231', 'KAPAS HOLY', NULL, 20000, 0, 35000, 1, '2022-06-30 23:08:49', '2022-06-30 23:08:49'),
 (232, 7, 'P000232', 'Kapas CATON BACON', NULL, 42000, 0, 55000, 5, '2022-06-30 23:09:05', '2022-06-30 23:09:05'),
 (233, 7, 'P000233', 'Kapas holy mini', NULL, 10000, 0, 15000, 3, '2022-06-30 23:09:17', '2022-06-30 23:09:17'),
-(234, 7, 'P000234', 'Pouch', NULL, 12000, 0, 20000, 9, '2022-06-30 23:09:35', '2022-06-30 23:09:35');
+(234, 7, 'P000234', 'Pouch', NULL, 12000, 0, 20000, 8, '2022-06-30 23:09:35', '2022-07-01 07:20:48'),
+(235, 7, 'P000235', 'Ganti kapas', NULL, 0, 0, 5000, 999994, '2022-07-01 07:26:32', '2022-07-01 07:27:08');
 
 -- --------------------------------------------------------
 
@@ -501,7 +542,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('S28ha1z4KpZkUCJZxXJ3Pk8x4SDjUY1mEPOGBbfG', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiZHdoS3pmUTF6SHlPQzh5VEtQVjdYYTBxVThDN3pydGE2RU8zalQyeiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWsiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkZlNJeGZLZlNwVGNXTGNQbnhCVHhsdXZFOHR0bWhkRDluaGd6bUs4aWxsZ2N6SlIwMnFRUUsiO3M6MTI6ImlkX3Blbmp1YWxhbiI7aTozO3M6MTI6ImlkX3BlbWJlbGlhbiI7aTozO3M6MTE6ImlkX3N1cHBsaWVyIjtzOjE6IjEiO30=', 1656659375);
+('S28ha1z4KpZkUCJZxXJ3Pk8x4SDjUY1mEPOGBbfG', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiZHdoS3pmUTF6SHlPQzh5VEtQVjdYYTBxVThDN3pydGE2RU8zalQyeiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Nzg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sYXBvcmFuP3RhbmdnYWxfYWtoaXI9MjAyMi0wNi0zMCZ0YW5nZ2FsX2F3YWw9MjAyMi0wNi0wMSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRmU0l4ZktmU3BUY1dMY1BueEJUeGx1dkU4dHRtaGREOW5oZ3ptSzhpbGxnY3pKUjAycVFRSyI7czoxMjoiaWRfcGVuanVhbGFuIjtpOjE0O3M6MTI6ImlkX3BlbWJlbGlhbiI7aTozO3M6MTE6ImlkX3N1cHBsaWVyIjtzOjE6IjEiO30=', 1656660734);
 
 -- --------------------------------------------------------
 
@@ -743,13 +784,13 @@ ALTER TABLE `pengeluaran`
 -- AUTO_INCREMENT untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id_penjualan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_penjualan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `penjualan_detail`
 --
 ALTER TABLE `penjualan_detail`
-  MODIFY `id_penjualan_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_penjualan_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -761,7 +802,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
+  MODIFY `id_produk` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 
 --
 -- AUTO_INCREMENT untuk tabel `setting`
